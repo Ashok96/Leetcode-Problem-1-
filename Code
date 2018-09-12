@@ -1,0 +1,12 @@
+'''[2, 7, 11, 15], target = 9, Leetcode first problem'''
+class Solution:
+  
+  def twoSum(self,numss,target):
+    thisdict = {}
+    for i in range(0,len(numss)):
+      if target-numss[i] in thisdict:
+        return [thisdict[target-numss[i]], i]
+      else:
+        thisdict[numss[i]] = i
+a = Solution()
+print(a.twoSum([3,3],6))
